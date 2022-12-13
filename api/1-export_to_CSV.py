@@ -10,12 +10,13 @@ def csv_export():
     """csv export"""
 
     url_base = "https://jsonplaceholder.typicode.com/"
+
     user = "{}users/{}".format(url_base, argv[1])
     res = get(user)
     json_user = res.json()
     username = json_user.get("username")
 
-    todos = "{}todos?userI={}".format(url_base, argv[1])
+    todos = "{}todos?userId={}".format(url_base, argv[1])
     res = get(todos)
     json_task = res.json()
     done_task = []
