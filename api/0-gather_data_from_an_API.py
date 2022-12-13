@@ -15,14 +15,14 @@ def api_todo():
 
     api_users = get("https://jsonplaceholder.typicode.com/users").json()
     for user in api_users:
-        if user['id'] == employee_id:
+        if (user['id']) == employee_id:
             employee_name = user['name']
             break
 
     api_tasks = get("https://jsonplaceholder.typicode.com/todos").json()
     for task in api_tasks:
-        if task['id'] == employee_id:
-            if task["complete"]:
+        if (task['id'] == employee_id):
+            if task['complete']:
                 titles_of_task.append(task['title'])
                 number_of_done_task += 1
             number_of_task += 1
