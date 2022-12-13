@@ -21,7 +21,7 @@ def api_todo():
 
     api_tasks = get("https://jsonplaceholder.typicode.com/todos").json()
     for task in api_tasks:
-        if (task['id'] == employee_id):
+        if (task['userid'] == employee_id):
             if task['complete']:
                 titles_of_task.append(task['title'])
                 number_of_done_task += 1
