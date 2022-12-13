@@ -10,7 +10,7 @@ def csv_export():
     """csv export"""
 
     url_base = "https://jsonplaceholder.typicode.com/"
-    user = "{}user/{}".format(url_base, argv[1])
+    user = "{}users/{}".format(url_base, argv[1])
     res = get(user)
     json_user = res.json()
     username = json_user.get("username")
